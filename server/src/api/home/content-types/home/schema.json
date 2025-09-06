@@ -1,0 +1,32 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home",
+    "description": "Content type per la homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titolo": {
+      "type": "string",
+      "maxLength": 255,
+      "required": true
+    },
+    "testo": {
+      "type": "text",
+      "required": false
+    },
+    "blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "blocks.infoblock",
+        "blocks.hero-section"
+      ]
+    }
+  }
+}
