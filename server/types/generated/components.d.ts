@@ -8,8 +8,8 @@ export interface BlocksHeroSection extends Struct.ComponentSchema {
   attributes: {
     cta: Schema.Attribute.Component<'elements.link', false>;
     heading: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images'>;
-    logo: Schema.Attribute.Component<'elements.logo', false>;
+    img: Schema.Attribute.Component<'elements.cloudinary-image', false>;
+    logo: Schema.Attribute.Component<'elements.cloudinary-image', false>;
     theme: Schema.Attribute.Enumeration<['gold', 'ghost']>;
   };
 }
@@ -23,9 +23,25 @@ export interface BlocksInfoblock extends Struct.ComponentSchema {
     content: Schema.Attribute.RichText;
     cta: Schema.Attribute.Component<'elements.link', false>;
     headline: Schema.Attribute.String;
-    image: Schema.Attribute.Media<'images'>;
+    img: Schema.Attribute.Component<'elements.cloudinary-image', false>;
     reversed: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     theme: Schema.Attribute.Enumeration<['gold', 'ghost']>;
+  };
+}
+
+export interface ElementsCloudinaryImage extends Struct.ComponentSchema {
+  collectionName: 'components_elements_cloudinary_images';
+  info: {
+    description: 'Gestione immagini Cloudinary tramite URL';
+    displayName: 'Cloudinary Image';
+    icon: 'image';
+  };
+  attributes: {
+    alt: Schema.Attribute.String;
+    height: Schema.Attribute.Integer;
+    public_id: Schema.Attribute.String;
+    url: Schema.Attribute.String & Schema.Attribute.Required;
+    width: Schema.Attribute.Integer;
   };
 }
 
@@ -57,6 +73,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'blocks.hero-section': BlocksHeroSection;
       'blocks.infoblock': BlocksInfoblock;
+      'elements.cloudinary-image': ElementsCloudinaryImage;
       'elements.link': ElementsLink;
       'elements.logo': ElementsLogo;
     }

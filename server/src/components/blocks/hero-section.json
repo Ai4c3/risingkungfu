@@ -7,15 +7,13 @@
   "attributes": {
     "logo": {
       "type": "component",
-      "component": "elements.logo",
+      "component": "elements.cloudinary-image",
       "repeatable": false
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
+    "img": {
+      "type": "component",
+      "component": "elements.cloudinary-image",
+      "repeatable": false
     },
     "heading": {
       "type": "string"

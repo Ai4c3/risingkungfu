@@ -1,0 +1,31 @@
+/* Stili per l'immagine hero di Cloudinary */
+.hero-image-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease;
+}
+
+.hero-image:hover {
+  transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+  .hero-image-container {
+    aspect-ratio: 4 / 3;
+    margin-bottom: 1.5rem;
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_elements_cloudinary_images",
+  "info": {
+    "displayName": "Cloudinary Image",
+    "icon": "image",
+    "description": "Gestione immagini Cloudinary tramite URL"
+  },
+  "options": {},
+  "attributes": {
+    "url": {
+      "type": "string",
+      "required": true
+    },
+    "alt": {
+      "type": "string"
+    },
+    "width": {
+      "type": "integer"
+    },
+    "height": {
+      "type": "integer"
+    },
+    "public_id": {
+      "type": "string"
+    }
+  }
+}

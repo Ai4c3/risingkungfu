@@ -9,12 +9,10 @@
       "type": "boolean",
       "default": false
     },
-    "image": {
-      "type": "media",
-      "multiple": false,
-      "allowedTypes": [
-        "images"
-      ]
+    "img": {
+      "type": "component",
+      "component": "elements.cloudinary-image",
+      "repeatable": false
     },
     "headline": {
       "type": "string"

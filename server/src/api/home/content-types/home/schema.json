@@ -27,6 +27,11 @@
         "blocks.infoblock",
         "blocks.hero-section"
       ]
+    },
+    "heroImage": {
+      "type": "component",
+      "component": "elements.cloudinary-image",
+      "required": false
     }
   }
 }
